@@ -40,7 +40,6 @@ logger.info(f'配置文件/excel数据/对象实例化，等前置条件处理�
 
 
 class TestApiAuto(object):
-
     # 启动方法
     def run_test(self):
         import os, shutil
@@ -55,8 +54,8 @@ class TestApiAuto(object):
 
     @pytest.mark.parametrize('case_number,case_title,path,is_token,method,parametric_key,file_var,'
                              'file_path, parameters, dependent,data,expect', data_list)
-    def test_main(self, case_number, case_title,path, is_token, method, parametric_key, file_var, file_path, parameters,
-                  dependent, data, expect):
+    def test_main(self, case_number, case_title, path, is_token, method, parametric_key, file_var,
+                  file_path, parameters, dependent, data, expect):
         """
         :param case_number: 用例编号
         :param case_title: 用例标题
