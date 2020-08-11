@@ -48,7 +48,7 @@ class TestApiAuto(object):
             shutil.rmtree(path='../report')
             shutil.rmtree(path='../log')
         # 日志存取路径
-        logger.add(log_path)
+        logger.add(log_path, encoding='utf-8')
         pytest.main(args=[f'--alluredir={report_data}'])
         os.system(f'allure generate {report_data} -o {report_generate} --clean')
         logger.warning('报告已生成')
