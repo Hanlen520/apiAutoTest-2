@@ -1,0 +1,211 @@
+{
+  "uid" : "e77f57d396ad0b22",
+  "name" : "get请求查询用户数据列表",
+  "fullName" : "test.test_api.TestApiAuto#test_main",
+  "historyId" : "815d291393b9ef194206c331fddd2e1c",
+  "time" : {
+    "start" : 1597170419908,
+    "stop" : 1597170420005,
+    "duration" : 97
+  },
+  "description" : "\n        :param case_number: 用例编号\n        :param case_title: 用例标题\n        :param path: 接口路径\n        :param is_token: token操作：写入token/读取token/不携带token\n        :param method: 请求方式：get/post/put/delete....\n        :param parametric_key: 入参关键字：params/data/json\n        :param file_var: 接口中接受文件对象的参数名称\n        :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n        多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n\n        :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{\"case_001\": '$.data.id'}，解析\n        从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n\n        :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{\"case_001\",[\"$.data.id\",\"$.data.username\"]}\n        解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{\"id\":500, \"username\":\"admin\"}\n        纳闷最终请求的data 将是 {\"id\":500, \"username\":\"admin\"} 与本身的data合并后的内容\n        :param data: 请求数据\n        :param expect:预期结果，最后与config/config.yaml下的response_reg->response提取出来的实际响应内容做对比，实现断言\n        :return:\n        ",
+  "descriptionHtml" : "<pre><code>    :param case_number: 用例编号\n    :param case_title: 用例标题\n    :param path: 接口路径\n    :param is_token: token操作：写入token/读取token/不携带token\n    :param method: 请求方式：get/post/put/delete....\n    :param parametric_key: 入参关键字：params/data/json\n    :param file_var: 接口中接受文件对象的参数名称\n    :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n    多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n\n    :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{&quot;case_001&quot;: '$.data.id'}，解析\n    从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n\n    :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{&quot;case_001&quot;,[&quot;$.data.id&quot;,&quot;$.data.username&quot;]}\n    解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{&quot;id&quot;:500, &quot;username&quot;:&quot;admin&quot;}\n    纳闷最终请求的data 将是 {&quot;id&quot;:500, &quot;username&quot;:&quot;admin&quot;} 与本身的data合并后的内容\n    :param data: 请求数据\n    :param expect:预期结果，最后与config/config.yaml下的response_reg-&gt;response提取出来的实际响应内容做对比，实现断言\n    :return:\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert {'msg': '无效to...'status': 400} == {'msg': '获取管理...'status': 200}\n  Differing items:\n  {'msg': '无效token'} != {'msg': '获取管理员列表成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+  "statusTrace" : "self = <test.test_api.TestApiAuto object at 0x0000000003FC54C8>\ncase_number = 'case_004', case_title = 'get请求查询用户数据列表', path = 'users'\nis_token = '', method = 'get', parametric_key = 'data', file_var = ''\nfile_path = '', parameters = '', dependent = ''\ndata = {'pagenum': 1, 'pagesize': '12'}\nexpect = {'msg': '获取管理员列表成功', 'status': 200}\n\n    @pytest.mark.parametrize('case_number,case_title,path,is_token,method,parametric_key,file_var,'\n                             'file_path, parameters, dependent,data,expect', data_list)\n    def test_main(self, case_number, case_title, path, is_token, method, parametric_key, file_var,\n                  file_path, parameters, dependent, data, expect):\n        \"\"\"\n        :param case_number: 用例编号\n        :param case_title: 用例标题\n        :param path: 接口路径\n        :param is_token: token操作：写入token/读取token/不携带token\n        :param method: 请求方式：get/post/put/delete....\n        :param parametric_key: 入参关键字：params/data/json\n        :param file_var: 接口中接受文件对象的参数名称\n        :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n        多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n    \n        :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{\"case_001\": '$.data.id'}，解析\n        从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n    \n        :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{\"case_001\",[\"$.data.id\",\"$.data.username\"]}\n        解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{\"id\":500, \"username\":\"admin\"}\n        纳闷最终请求的data 将是 {\"id\":500, \"username\":\"admin\"} 与本身的data合并后的内容\n        :param data: 请求数据\n        :param expect:预期结果，最后与config/config.yaml下的response_reg->response提取出来的实际响应内容做对比，实现断言\n        :return:\n        \"\"\"\n    \n        # 感谢：https://www.cnblogs.com/yoyoketang/p/13386145.html，提供动态添加标题的实例代码\n        # 动态添加标题\n        allure.dynamic.title(case_title)\n    \n        logger.debug(f'⬇️⬇️⬇️...执行用例编号:{case_number}...⬇️⬇️⬇️️')\n        with allure.step(\"处理相关数据依赖，header\"):\n            data, header, parameters_path_url = treat_data.treating_data(is_token, parameters, dependent, data, save_response_dict)\n        with allure.step(\"发送请求，取得响应结果的json串\"):\n            res = br.base_requests(method=method, url=base_url + path + parameters_path_url, parametric_key=parametric_key, file_var=file_var, file_path=file_path,\n                                   data=data, header=header)\n        with allure.step(\"将响应结果的内容写入实际响应字典中\"):\n            save_response_dict.save_actual_response(case_key=case_number, case_response=res)\n            # 写token的接口必须是要正确无误能返回token的\n            if is_token == '写':\n                with allure.step(\"从登录后的响应中提取token到header中\"):\n                    treat_data.token_header['Authorization'] = jsonpath.jsonpath(res, token_reg)[0]\n        with allure.step(\"根据配置文件的提取响应规则提取实际数据\"):\n            really = jsonpath.jsonpath(res, res_reg)[0]\n        with allure.step(\"处理读取出来的预期结果响应\"):\n            expect = json.loads(expect)\n        with allure.step(\"预期结果与实际响应进行断言操作\"):\n>           assert really == expect\nE           AssertionError: assert {'msg': '无效to...'status': 400} == {'msg': '获取管理...'status': 200}\nE             Differing items:\nE             {'msg': '无效token'} != {'msg': '获取管理员列表成功'}\nE             {'status': 400} != {'status': 200}\nE             Use -v to get the full diff\n\ntest_api.py:102: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n        :param case_number: 用例编号\n        :param case_title: 用例标题\n        :param path: 接口路径\n        :param is_token: token操作：写入token/读取token/不携带token\n        :param method: 请求方式：get/post/put/delete....\n        :param parametric_key: 入参关键字：params/data/json\n        :param file_var: 接口中接受文件对象的参数名称\n        :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n        多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n\n        :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{\"case_001\": '$.data.id'}，解析\n        从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n\n        :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{\"case_001\",[\"$.data.id\",\"$.data.username\"]}\n        解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{\"id\":500, \"username\":\"admin\"}\n        纳闷最终请求的data 将是 {\"id\":500, \"username\":\"admin\"} 与本身的data合并后的内容\n        :param data: 请求数据\n        :param expect:预期结果，最后与config/config.yaml下的response_reg->response提取出来的实际响应内容做对比，实现断言\n        :return:\n        ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert {'msg': '无效to...'status': 400} == {'msg': '获取管理...'status': 200}\n  Differing items:\n  {'msg': '无效token'} != {'msg': '获取管理员列表成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+    "statusTrace" : "self = <test.test_api.TestApiAuto object at 0x0000000003FC54C8>\ncase_number = 'case_004', case_title = 'get请求查询用户数据列表', path = 'users'\nis_token = '', method = 'get', parametric_key = 'data', file_var = ''\nfile_path = '', parameters = '', dependent = ''\ndata = {'pagenum': 1, 'pagesize': '12'}\nexpect = {'msg': '获取管理员列表成功', 'status': 200}\n\n    @pytest.mark.parametrize('case_number,case_title,path,is_token,method,parametric_key,file_var,'\n                             'file_path, parameters, dependent,data,expect', data_list)\n    def test_main(self, case_number, case_title, path, is_token, method, parametric_key, file_var,\n                  file_path, parameters, dependent, data, expect):\n        \"\"\"\n        :param case_number: 用例编号\n        :param case_title: 用例标题\n        :param path: 接口路径\n        :param is_token: token操作：写入token/读取token/不携带token\n        :param method: 请求方式：get/post/put/delete....\n        :param parametric_key: 入参关键字：params/data/json\n        :param file_var: 接口中接受文件对象的参数名称\n        :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n        多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n    \n        :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{\"case_001\": '$.data.id'}，解析\n        从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n    \n        :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{\"case_001\",[\"$.data.id\",\"$.data.username\"]}\n        解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{\"id\":500, \"username\":\"admin\"}\n        纳闷最终请求的data 将是 {\"id\":500, \"username\":\"admin\"} 与本身的data合并后的内容\n        :param data: 请求数据\n        :param expect:预期结果，最后与config/config.yaml下的response_reg->response提取出来的实际响应内容做对比，实现断言\n        :return:\n        \"\"\"\n    \n        # 感谢：https://www.cnblogs.com/yoyoketang/p/13386145.html，提供动态添加标题的实例代码\n        # 动态添加标题\n        allure.dynamic.title(case_title)\n    \n        logger.debug(f'⬇️⬇️⬇️...执行用例编号:{case_number}...⬇️⬇️⬇️️')\n        with allure.step(\"处理相关数据依赖，header\"):\n            data, header, parameters_path_url = treat_data.treating_data(is_token, parameters, dependent, data, save_response_dict)\n        with allure.step(\"发送请求，取得响应结果的json串\"):\n            res = br.base_requests(method=method, url=base_url + path + parameters_path_url, parametric_key=parametric_key, file_var=file_var, file_path=file_path,\n                                   data=data, header=header)\n        with allure.step(\"将响应结果的内容写入实际响应字典中\"):\n            save_response_dict.save_actual_response(case_key=case_number, case_response=res)\n            # 写token的接口必须是要正确无误能返回token的\n            if is_token == '写':\n                with allure.step(\"从登录后的响应中提取token到header中\"):\n                    treat_data.token_header['Authorization'] = jsonpath.jsonpath(res, token_reg)[0]\n        with allure.step(\"根据配置文件的提取响应规则提取实际数据\"):\n            really = jsonpath.jsonpath(res, res_reg)[0]\n        with allure.step(\"处理读取出来的预期结果响应\"):\n            expect = json.loads(expect)\n        with allure.step(\"预期结果与实际响应进行断言操作\"):\n>           assert really == expect\nE           AssertionError: assert {'msg': '无效to...'status': 400} == {'msg': '获取管理...'status': 200}\nE             Differing items:\nE             {'msg': '无效token'} != {'msg': '获取管理员列表成功'}\nE             {'status': 400} != {'status': 200}\nE             Use -v to get the full diff\n\ntest_api.py:102: AssertionError",
+    "steps" : [ {
+      "name" : "处理相关数据依赖，header",
+      "time" : {
+        "start" : 1597170419909,
+        "stop" : 1597170419910,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，取得响应结果的json串",
+      "time" : {
+        "start" : 1597170419910,
+        "stop" : 1597170420001,
+        "duration" : 91
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "将响应结果的内容写入实际响应字典中",
+      "time" : {
+        "start" : 1597170420002,
+        "stop" : 1597170420002,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "根据配置文件的提取响应规则提取实际数据",
+      "time" : {
+        "start" : 1597170420002,
+        "stop" : 1597170420003,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "处理读取出来的预期结果响应",
+      "time" : {
+        "start" : 1597170420003,
+        "stop" : 1597170420003,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "预期结果与实际响应进行断言操作",
+      "time" : {
+        "start" : 1597170420003,
+        "stop" : 1597170420004,
+        "duration" : 1
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert {'msg': '无效to...'status': 400} == {'msg': '获取管理...'status': 200}\n  Differing items:\n  {'msg': '无效token'} != {'msg': '获取管理员列表成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff\n",
+      "statusTrace" : "  File \"D:\\代码文件\\apiAutoTest\\test\\test_api.py\", line 102, in test_main\n    assert really == expect\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "755191ae878ed771",
+      "name" : "stderr",
+      "source" : "755191ae878ed771.txt",
+      "type" : "text/plain",
+      "size" : 2670
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "win7"
+  }, {
+    "name" : "thread",
+    "value" : "2900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_number",
+    "value" : "'case_004'"
+  }, {
+    "name" : "case_title",
+    "value" : "'get请求查询用户数据列表'"
+  }, {
+    "name" : "data",
+    "value" : "'{\"pagenum\": 1, \"pagesize\": \"12\"}'"
+  }, {
+    "name" : "dependent",
+    "value" : "''"
+  }, {
+    "name" : "expect",
+    "value" : "'{\n\"msg\": \"获取管理员列表成功\", \"status\": 200\n}'"
+  }, {
+    "name" : "file_path",
+    "value" : "''"
+  }, {
+    "name" : "file_var",
+    "value" : "''"
+  }, {
+    "name" : "is_token",
+    "value" : "''"
+  }, {
+    "name" : "method",
+    "value" : "'get'"
+  }, {
+    "name" : "parameters",
+    "value" : "''"
+  }, {
+    "name" : "parametric_key",
+    "value" : "'data'"
+  }, {
+    "name" : "path",
+    "value" : "'users'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e77f57d396ad0b22.json",
+  "parameterValues" : [ "'case_004'", "'get请求查询用户数据列表'", "'{\"pagenum\": 1, \"pagesize\": \"12\"}'", "''", "'{\n\"msg\": \"获取管理员列表成功\", \"status\": 200\n}'", "''", "''", "''", "'get'", "''", "'data'", "'users'" ]
+}

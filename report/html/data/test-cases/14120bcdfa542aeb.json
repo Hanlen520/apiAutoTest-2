@@ -1,0 +1,201 @@
+{
+  "uid" : "14120bcdfa542aeb",
+  "name" : "修改用户状态接口",
+  "fullName" : "test.test_api.TestApiAuto#test_main",
+  "historyId" : "672137c866bff1a1c0eece45f3b446e3",
+  "time" : {
+    "start" : 1597170420304,
+    "stop" : 1597170420416,
+    "duration" : 112
+  },
+  "description" : "\n        :param case_number: 用例编号\n        :param case_title: 用例标题\n        :param path: 接口路径\n        :param is_token: token操作：写入token/读取token/不携带token\n        :param method: 请求方式：get/post/put/delete....\n        :param parametric_key: 入参关键字：params/data/json\n        :param file_var: 接口中接受文件对象的参数名称\n        :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n        多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n\n        :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{\"case_001\": '$.data.id'}，解析\n        从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n\n        :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{\"case_001\",[\"$.data.id\",\"$.data.username\"]}\n        解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{\"id\":500, \"username\":\"admin\"}\n        纳闷最终请求的data 将是 {\"id\":500, \"username\":\"admin\"} 与本身的data合并后的内容\n        :param data: 请求数据\n        :param expect:预期结果，最后与config/config.yaml下的response_reg->response提取出来的实际响应内容做对比，实现断言\n        :return:\n        ",
+  "descriptionHtml" : "<pre><code>    :param case_number: 用例编号\n    :param case_title: 用例标题\n    :param path: 接口路径\n    :param is_token: token操作：写入token/读取token/不携带token\n    :param method: 请求方式：get/post/put/delete....\n    :param parametric_key: 入参关键字：params/data/json\n    :param file_var: 接口中接受文件对象的参数名称\n    :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n    多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n\n    :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{&quot;case_001&quot;: '$.data.id'}，解析\n    从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n\n    :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{&quot;case_001&quot;,[&quot;$.data.id&quot;,&quot;$.data.username&quot;]}\n    解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{&quot;id&quot;:500, &quot;username&quot;:&quot;admin&quot;}\n    纳闷最终请求的data 将是 {&quot;id&quot;:500, &quot;username&quot;:&quot;admin&quot;} 与本身的data合并后的内容\n    :param data: 请求数据\n    :param expect:预期结果，最后与config/config.yaml下的response_reg-&gt;response提取出来的实际响应内容做对比，实现断言\n    :return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n        :param case_number: 用例编号\n        :param case_title: 用例标题\n        :param path: 接口路径\n        :param is_token: token操作：写入token/读取token/不携带token\n        :param method: 请求方式：get/post/put/delete....\n        :param parametric_key: 入参关键字：params/data/json\n        :param file_var: 接口中接受文件对象的参数名称\n        :param file_path: 文件路径，单文件实例：/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py\n        多文件实例['/Users/zy7y/PycharmProjects/apiAutoTest/test/__init__.py','/Users/zy7y/PycharmProjects/apiAutoTest/test/test_api.py']\n\n        :param parameters: path参数(携带在url中的参数)依赖处理 users/:id(id携带在url中) 实例:{\"case_001\": '$.data.id'}，解析\n        从用例编号为case_001的实际结果响应中提取data字典里面的id的内容(假设提取出来是500), 最后请求的路径将是host + users/500\n\n        :param dependent: data数据依赖，该接口需要上一个接口返回的响应中的某个字段及内容：实例{\"case_001\",[\"$.data.id\",\"$.data.username\"]}\n        解析: 从用例case_001的实际响应结果中提取到data下面的id，与username的值(假设id值为500，username为admin)，那么提取的数据依赖内容将是{\"id\":500, \"username\":\"admin\"}\n        纳闷最终请求的data 将是 {\"id\":500, \"username\":\"admin\"} 与本身的data合并后的内容\n        :param data: 请求数据\n        :param expect:预期结果，最后与config/config.yaml下的response_reg->response提取出来的实际响应内容做对比，实现断言\n        :return:\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理相关数据依赖，header",
+      "time" : {
+        "start" : 1597170420305,
+        "stop" : 1597170420307,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，取得响应结果的json串",
+      "time" : {
+        "start" : 1597170420307,
+        "stop" : 1597170420412,
+        "duration" : 105
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "将响应结果的内容写入实际响应字典中",
+      "time" : {
+        "start" : 1597170420413,
+        "stop" : 1597170420414,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "根据配置文件的提取响应规则提取实际数据",
+      "time" : {
+        "start" : 1597170420414,
+        "stop" : 1597170420414,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "处理读取出来的预期结果响应",
+      "time" : {
+        "start" : 1597170420414,
+        "stop" : 1597170420414,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "预期结果与实际响应进行断言操作",
+      "time" : {
+        "start" : 1597170420414,
+        "stop" : 1597170420416,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "58fc87a2eae0b00",
+      "name" : "stderr",
+      "source" : "58fc87a2eae0b00.txt",
+      "type" : "text/plain",
+      "size" : 4374
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "win7"
+  }, {
+    "name" : "thread",
+    "value" : "2900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_number",
+    "value" : "'case_006'"
+  }, {
+    "name" : "case_title",
+    "value" : "'修改用户状态接口'"
+  }, {
+    "name" : "data",
+    "value" : "''"
+  }, {
+    "name" : "dependent",
+    "value" : "''"
+  }, {
+    "name" : "expect",
+    "value" : "'{\n\"msg\": \"设置状态成功\", \"status\": 200\n}'"
+  }, {
+    "name" : "file_path",
+    "value" : "''"
+  }, {
+    "name" : "file_var",
+    "value" : "''"
+  }, {
+    "name" : "is_token",
+    "value" : "'读'"
+  }, {
+    "name" : "method",
+    "value" : "'put'"
+  }, {
+    "name" : "parameters",
+    "value" : "'/{\"case_005\":\"$.data.id\"}/state/{\"case_005\":\"$.data.create_time\"}'"
+  }, {
+    "name" : "parametric_key",
+    "value" : "'data'"
+  }, {
+    "name" : "path",
+    "value" : "'users'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "14120bcdfa542aeb.json",
+  "parameterValues" : [ "'case_006'", "'修改用户状态接口'", "''", "''", "'{\n\"msg\": \"设置状态成功\", \"status\": 200\n}'", "''", "''", "'读'", "'put'", "'/{\"case_005\":\"$.data.id\"}/state/{\"case_005\":\"$.data.create_time\"}'", "'data'", "'users'" ]
+}

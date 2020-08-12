@@ -1,0 +1,155 @@
+{
+  "3e3850b31abd15e730964366c5eac0f3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "913f21dab231989f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170420445,
+        "stop" : 1597170420537,
+        "duration" : 92
+      }
+    } ]
+  },
+  "672137c866bff1a1c0eece45f3b446e3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "14120bcdfa542aeb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170420304,
+        "stop" : 1597170420416,
+        "duration" : 112
+      }
+    } ]
+  },
+  "ee541ecec728bf86086e2ac8ea106347" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4b3f13cf97be1b62",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170419585,
+        "stop" : 1597170419761,
+        "duration" : 176
+      }
+    } ]
+  },
+  "214100763415559eb35383b0cf146d06" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1a0ad7b860473c55",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170419771,
+        "stop" : 1597170419886,
+        "duration" : 115
+      }
+    } ]
+  },
+  "67c2cf31906aff5a9821bc207fcb94cc" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1311c6a59b3df6d2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170420555,
+        "stop" : 1597170420659,
+        "duration" : 104
+      }
+    } ]
+  },
+  "85d8d71b50041c7b64ff34f9659f11ec" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1df2851a1fff4529",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170419460,
+        "stop" : 1597170419571,
+        "duration" : 111
+      }
+    } ]
+  },
+  "815d291393b9ef194206c331fddd2e1c" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e77f57d396ad0b22",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '无效to...'status': 400} == {'msg': '获取管理...'status': 200}\n  Differing items:\n  {'msg': '无效token'} != {'msg': '获取管理员列表成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1597170419908,
+        "stop" : 1597170420005,
+        "duration" : 97
+      }
+    } ]
+  },
+  "0a3e767a8b305671d080fe97b31d4c55" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "557c76116a35407c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597170420089,
+        "stop" : 1597170420276,
+        "duration" : 187
+      }
+    } ]
+  }
+}
